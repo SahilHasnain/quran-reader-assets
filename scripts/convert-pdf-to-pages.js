@@ -40,7 +40,7 @@ async function main() {
   }
 
   const pagesDir = path.join(ROOT_DIR, lang, "pages");
-  const manifestPath = path.join(ROOT_DIR, "manifests", `${lang}.json`);
+  const manifestPath = path.join(ROOT_DIR, "manifest.json");
 
   await emptyDirectory(pagesDir);
 
@@ -70,7 +70,12 @@ async function main() {
 
   const manifest = JSON.parse(await fs.promises.readFile(manifestPath, "utf8"));
   manifest.version = new Date().toISOString().slice(0, 10);
-  manifest.totalPages = pngFiles.length;
+  manifest.languages[lang] = manifest.languages[lang] || {};
+  manifest.languages[lang].totalPages = pngFiles.length;
+  manifest.languages[lang].label = config.label;
+  manifest.languages[lang].baseUrl = `https://cdn.jsdelivr.net/gh/SahilHasnain/quran-reader-assets@main/${lang}/pages`;
+  manifest.languages[lang].filePattern = "page-{page}.png";
+  manifest.languages[lang].extension = "png";
   await fs.promises.writeFile(manifestPath, `${JSON.stringify(manifest, null, 2)}\n`);
 
   console.log(`[${config.label}] Converted ${pngFiles.length} pages to ${pagesDir}`);

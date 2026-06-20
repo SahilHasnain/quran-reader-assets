@@ -1,9 +1,0 @@
-{
-  "version": "2026-06-20",
-  "totalPages": 604,
-  "lang": "english",
-  "label": "English",
-  "baseUrl": "https://cdn.jsdelivr.net/gh/SahilHasnain/quran-reader-assets@main/english/pages",
-  "filePattern": "page-{page}.png",
-  "extension": "png"
-}

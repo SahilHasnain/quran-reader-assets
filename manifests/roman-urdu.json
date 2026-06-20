@@ -1,9 +1,0 @@
-{
-  "version": "2026-06-20",
-  "totalPages": 1207,
-  "lang": "roman-urdu",
-  "label": "Roman Urdu",
-  "baseUrl": "https://cdn.jsdelivr.net/gh/SahilHasnain/quran-reader-assets@main/roman-urdu/pages",
-  "filePattern": "page-{page}.png",
-  "extension": "png"
-}
