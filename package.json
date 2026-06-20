@@ -1,0 +1,13 @@
+{
+  "name": "quran-reader-assets",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "convert:english": "node scripts/convert-pdf-to-pages.js --lang=english",
+    "convert:roman-urdu": "node scripts/convert-pdf-to-pages.js --lang=roman-urdu",
+    "convert:all": "npm run convert:english && npm run convert:roman-urdu"
+  },
+  "dependencies": {
+    "pdf-poppler": "^0.2.1"
+  }
+}
