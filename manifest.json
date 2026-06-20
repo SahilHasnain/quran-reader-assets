@@ -12,7 +12,7 @@
     "english": {
       "label": "English",
       "nativeLabel": "English",
-      "totalPages": 604,
+      "totalPages": 1306,
       "baseUrl": "https://cdn.jsdelivr.net/gh/SahilHasnain/quran-reader-assets@main/english/pages",
       "filePattern": "page-{page}.png",
       "extension": "png"
